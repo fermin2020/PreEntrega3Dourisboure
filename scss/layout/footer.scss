@@ -1,0 +1,92 @@
+/*-------------------- F O O T E R --------------------*/
+footer {
+    min-height: 30vh;
+    padding: 50px 0px;
+    background: url(../Image/Footer-puestaDeSol.jpg);
+    background-size: cover;
+}
+.container__footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 200px;
+    align-items: baseline;
+}
+.box__footer{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+.box__footer .logo img{
+   width: 50px;
+   border-radius: 80px;
+}
+.logo  a i{
+    font-size: 3rem;
+    color: #333;
+    text-decoration: none;  
+}
+.logo a i{/*logo hueso*/
+    transform: rotate(-65deg);   
+    color:var(--blueViolet);
+}
+.box__footer .logo a   {
+    font-size: 20px;
+    text-shadow: 7px 4px 5px blueviolet;
+    text-shadow: 7px 4px 5px black;
+}
+.box__footer .logo i{
+    font-size: 40px;
+}
+.box__footer .terms{
+    max-width: 350px;
+    margin-top: 20px;
+    font-weight: 500;
+    Color:white;
+    font-size: 18px;
+}
+.box__footer h2{
+    margin-bottom: 30px;
+    color: white;
+    font-weight: 700;
+    text-decoration: underline;
+    text-shadow: 7px 4px 5px black;
+}
+.box__footer a{
+    margin-top: 20px;
+    Color: white;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.box__footer a:hover{
+    opacity: 0.8;
+}
+.box__footer a .Fab{
+    font-size: 20px;
+}
+.box__copyright{
+    max-width: 355px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+.box__copyright p{
+    background-color: rgba(0, 0, 0, 0.322);
+    Color: black;
+    margin-top: 20px;
+    text-shadow: 7px 4px 5px black;
+    position: relative;
+    top: 16px;
+    right: -40px;
+}
+.box__copyright hr{
+    border:none;
+    height:1px;
+    Color: black;
+}
+/*-------------------- F O O T E R   E N D --------------------*/
+
