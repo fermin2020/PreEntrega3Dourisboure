@@ -1,0 +1,280 @@
+/*-------------------- M A I N --------------------*/
+/*----------SECCION PRINCIPAL----------*/
+section{ 
+    padding: 1rem 5%;
+}
+.principal{      
+    min-height: 75vh;
+    background: url(../Image/home-bg.webp) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+.principal .content span{
+    color: blueviolet;
+    font-size: 2rem;
+}
+.principal .content h3{
+    color: white;
+    font-size: 5.5rem;
+}
+.principal .content .btn{
+    background: #fff;
+}
+/*----------SECCION PRINCIPAL END----------*/
+
+/*----------SECCION LOGO Y COMPRA----------*/
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .7rem 2.5rem;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    background: var(--blueViolet);
+    color: #333;
+    position: relative;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    overflow: hidden;
+    z-index: 0;
+}
+.btn::before{
+    content: '';
+    position: absolute;
+    top:0; left:0;
+    height: 100%;
+    width: 100%;
+    clip-path: polygon( 0 0, 100% 0, 10% 25%, 0 100%);
+    z-index: -1;
+    background: #444;
+    transition: .3s cubic-bezier(.38,1.15,.7,1.12);
+}
+.btn:hover:before{
+    clip-path: polygon( 0 0, 100% 0, 10% 25%, 0 100%);
+}
+.btn:hover{
+    color:var(--blueViolet);
+}
+.categoria .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+.categoria .box-container .box{
+    width: 25rem;
+    margin: 2rem;
+    text-align: center;
+}
+.categoria .box-container .box img{
+    width: 100%;
+    background-color: aliceblue;
+    border-radius: 3rem;
+}
+.categoria .box-container .box img:hover{
+    -webkit-border-radius:50%;
+    border-radius:50%;
+    -webkit-box-shadow: 0px 0px 15px 15px var(--blueViolet);
+    box-shadow: 0px 0px 15px 15px blueviolet;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+.categoria .box-container .box img:hover{ /*HOVER:PSEUDOCLASE, ESTABLE */
+    transform: scale(1.1);       
+    transition: all 0.4s ease;
+}
+.categoria .box-container .box h3{
+    color: #333;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+/*----------SECCION LOGO Y COMPRA END----------*/
+
+/*----------SECCION RECOMENDADOS----------*/
+.recomendados .box-container{      
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+.recomendados .box-container .box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    margin: 2rem;
+    flex: 1 1 40rem;
+    position: relative;
+    border-radius: .5rem;
+    border: .1rem solid rgba(0,0,0,.1);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    background-color: aliceblue;
+}
+.recomendados .box-container .box img{
+    width: 20rem;
+}
+.main .recomendados .box-container .box img{
+    margin: 10%;
+}
+.recomendados .box-container .box img:hover{
+    transform: scale(1.1);
+    transition: all 0.4s ease;
+}
+.recomendados .box-container .box .price{
+    position: absolute;
+    top: -1rem; right:-1rem;
+    height:6rem;
+    width:6rem;
+    text-align: center;
+    line-height: 6rem;
+    border-radius: 50%;
+    background: var(--blueViolet);
+    color: #333;
+    font-size: 1.5rem;
+}
+.recomendados .box-container .box .content{
+    padding: 1rem;
+}
+.recomendados .box-container .box .content .stars i{
+    color: var(--blueViolet);
+    font-size: 1.5rem;
+}
+.recomendados .box-container .box .content h3{
+    font-size: 2rem;
+    color: #333;
+    padding-top: .5rem;
+}
+.recomendados .box-container .box .content p{
+    font-size: 1.5rem;
+    color: #666;
+    padding: 1rem 0;
+}
+/*----------SECCION RECOMENDADOS END----------*/
+
+/*----------SECCION CAROUSEL----------*/
+.container {
+    position: relative;
+    width: 500px;
+    margin: -35px auto 0 auto;
+    perspective: 1000px;
+    object-fit: contain;
+  }
+  .carousel {
+    position: absolute;
+    left: 100px;
+    width: 60%;
+    height: 100%;
+    transform-style: preserve-3d; 
+    animation: rotate360 60s infinite forwards linear;
+    object-fit: contain;
+  }
+.carousel__face { 
+    position: absolute;
+    width: 300px;
+    height: 187px;
+    top: 20px;
+    left: 10px;
+    right: 10px;
+    background-size: cover;
+    box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
+    display: flex;
+    border-radius: 5%;
+}
+  span {
+    margin: auto;
+    font-size: 2rem;
+  }
+.carousel__face:nth-child(1) {
+    background-image: url("../Image/juana.jpg");
+    transform: rotateY(  0deg) translateZ(430px); 
+}
+  .carousel__face:nth-child(2) { 
+    background-image: url("../Image/polo2.jpg");
+      transform: rotateY( 40deg) translateZ(430px); }
+  .carousel__face:nth-child(3) {
+    background-image: url("../Image/charli.jpg");
+    transform: rotateY( 80deg) translateZ(430px); }
+  .carousel__face:nth-child(4) {
+    background-image: url("../Image/candela.jpg");
+    transform: rotateY(120deg) translateZ(430px); }
+  .carousel__face:nth-child(5) { 
+    background-image: url("../Image/flopy.jpg");
+   transform: rotateY(160deg) translateZ(430px); }
+  .carousel__face:nth-child(6) { 
+    background-image: url("../Image/deisi.jpg");
+   transform: rotateY(200deg) translateZ(430px); }
+  .carousel__face:nth-child(7) { 
+    background-image: url("../Image/x.jpg");
+   transform: rotateY(240deg) translateZ(430px); }
+  .carousel__face:nth-child(8) {
+    background-image: url("../Image/serena.jpg");
+    transform: rotateY(280deg) translateZ(430px); }
+  .carousel__face:nth-child(9) {
+    background-image: url("../Image/piti.jpg");
+    transform: rotateY(320deg) translateZ(430px); }
+
+  @keyframes rotate360 {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(-600deg);
+    }
+  }
+/*----------SECCION CAROUSEL END----------*/
+
+/*----------SECCION PRODUCTOS----------*/
+.productos .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+} 
+.productos .box-container .box{
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    border: .1rem solid rgba(0,0,0,.1);
+    border-radius:  .5rem;
+    padding: 1rem;
+    margin: 1.5rem;
+    flex: 1 1 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.productos .box-container .box img{
+    width: 15rem;
+}
+.productos .box-container .box img{
+    width: 15rem;
+}
+.productos .box-container .box .content{
+    padding: 1rem;
+}
+.productos .box-container .box .content .stars i{
+    font-size: 1.5rem;
+    color: var(--blueViolet);
+}
+/*----------SECCION PRODUCTOS END----------*/
+
+/*----------SECCION MAP----------*/
+.map{
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    position: relative;
+    right: 100px;
+}
+.image{
+    flex: 1 1 40rem;
+}
+img{
+    width: 80%;
+    position: relative;
+    right: -10px;
+}
+/*----------SECCION MAP END----------*/
+/*-------------------- M A I N   E N D --------------------*/
